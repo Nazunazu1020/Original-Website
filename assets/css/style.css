@@ -1,0 +1,94 @@
+/* 
+layouts
+タグのCSS
+ */
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(220, 219, 219);
+}
+h2{
+
+}
+
+/* header 
+*/
+header{
+    display: flex;
+    background-image: #;
+    
+}
+#nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: absolute;
+    right: 10px;
+    gap: 7px;
+    list-style: none;
+
+}
+
+.top-logo{
+
+
+}
+.site-name{
+
+}
+
+#nav{
+
+}
+
+
+/* section-top
+ */
+.top-img{
+
+}
+.catchphrase{
+
+}
+
+
+
+/* section-feature
+ */
+.seasonal-img{
+
+}
+
+
+/* section-search
+*/
+form{
+
+}
+
+
+/* gallery
+ */
+.gallery{
+}
+
+
+/* map
+*/
+map{
+
+}
+
+/* footer
+ */
+.bottom-logo{
+
+}
+.Copyright{
+
+}
+
+a{
+    
+}
