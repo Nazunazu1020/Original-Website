@@ -3,92 +3,340 @@ layouts
 タグのCSS
  */
 
-*{
-    margin: 0;
-    padding: 0;
-    background-color: rgb(220, 219, 219);
-}
-h2{
-
-}
-
 /* header 
 */
+body{
+  width:100wh;
+}
+
+
 header{
-    display: flex;
-    background-image: #;
-    
-}
-#nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    position: absolute;
-    right: 10px;
-    gap: 7px;
-    list-style: none;
-
+  position: fixed;
+  z-index: 1000;
 }
 
-.top-logo{
-
-
-}
-.site-name{
-
-}
-
-#nav{
-
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  
 }
 
-
-/* section-top
- */
-.top-img{
-
+.top-logo {
+  width: 60px;
+  height: 50px;
+  margin-top: -5px;
 }
-.catchphrase{
-
+.header-logo
+{
+  display: flex;
+  margin-left: 20px;
+  margin-top: 10px;
+  gap: 5px;
 }
+
+.header-right {
+  margin: 20px;
+  padding: 0;
+}
+
+.navber {
+  list-style: none;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.header-right ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  font-size: large;
+  text-decoration: none;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: bold;
+  color: initial;
+  position: relative;
+  left: 600px;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
+  color: initial;
+  color:#a78f45
+  
+}
+
+.site-name {
+  font-size: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-left: 10px;
+  color: #a78f45
+}
+
+
+.top-container{
+  height: 100vh;
+  display: flex;
+}
+
+.marble-back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/marble.jpg);
+  opacity: 0.7;
+  z-index: -1; /* 背景を後ろに配置 */
+}
+
+.womancafeimg{
+  height: 350px;
+  width: 350px;
+  position: absolute;
+  top: 160px;
+  left: 800px;
+}
+
+
+.head-phrases{
+  position: relative;
+  top: 250px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: rgb(153, 139, 60);
+  font-weight: bold;
+  margin-left: 100px;
+}
+.catchphrase1
+{
+  font-size: 15px;
+  margin-left: 35px;
+}
+.catchphrase2{
+  font-size: 40px;
+  margin-top: 30px;
+}
+.indent{
+  position: relative;
+  top: 25px;
+  left: 300px;
+}
+
 
 
 
 /* section-feature
  */
+.feature1{
+  height: 500px;
+  padding: 80px;
+  overflow: hidden;
+}
+
+.feature{
+  font-size: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+  color: rgb(224, 208, 116);
+  position: relative;
+  top: 30px;
+}
+.seasonal-name{
+text-align: center;
+}
+
 .seasonal-img{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+.seasonal-imgs{
+  width: 250px;
+  height: 250px;
+  transition:1s all;
+  border-radius: 50%;
+}
 
+.seasonal-imgs:hover{
+  transform:scale(1.1,1.1);
+  transition:1s all;
 }
 
 
-/* section-search
-*/
-form{
 
+
+
+/* .imgnames{
+  display: flex;
+  align-items: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgba(124, 136, 136, 0.886);
+} */
+
+
+.Search{
+  background-color: rgba(236, 232, 232, 0.769);
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+/* justify-content: center; */
+align-items: center;
+}
+
+.search{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(224, 208, 116);
+  font-size: 40px;
+  /* text-align: center; */
+  padding: 50px;
 }
 
 
-/* gallery
- */
-.gallery{
+.search-bar2{
+width: 300px;
+height: 40px;
+font-size: 15px;
+border-color: white;
+}
+
+.gallery1{
+  margin: 130px 50px;
+}
+
+.gallery {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(224, 208, 116);
+  font-size: 40px;
+  display:flex;
+  justify-content: center;
+  padding: 80px;
+  margin-top: -80px;
+  overflow: hidden;
+}  
+
+.imgs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 90px;
+  overflow: hidden;
+}
+.imgs2{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  }
+
+
+.cafename{
+  font-size: 13px;
+  margin-top: 15px;
+  text-align: center;
+}
+.imgs2:hover{
+  transform:scale(1.1,1.1);
+  transition:1s all;
 }
 
 
-/* map
-*/
-map{
-
+.map1{
+  background-color: rgba(236, 232, 232, 0.769);
+  height: 600px;
+  padding: 100px;
 }
+
+.map{
+  font-size: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: rgb(224, 208, 116);
+  margin-bottom: 50px;
+}
+
+.mapname{
+display: flex;
+justify-content: center;
+padding: 50px;
+}
+
+.googlemap{
+  display: flex;
+  justify-content: center;
+}
+
+iframe{
+height: 70vh;
+width: 50vw;
+}
+
+
 
 /* footer
  */
-.bottom-logo{
 
+
+footer {
+  padding: auto;
+  height: 65vh;
+  width: 100vw;
+  position: absolute;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #a78f45
+}
+
+.footer-container{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 50px;
+}
+
+.snsicons{
+font-size: 20px;
+gap: 10px;
+margin: 30px;
+}
+.footer-tags{
+  display: flex;
+flex-direction: column;
+align-items: center;
+}
+.bottom-tag{
+  font-size: 30px;
+  margin-top: 100px;
+  
+}
+.contactbar{
+  font-size: 30px;
+  margin-top: 10px;
 }
 .Copyright{
-
+position: absolute;
+bottom: 5px;
 }
 
-a{
-    
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/footerimg.jpg);
+  opacity: 0.3;
+  z-index: -1; /* 背景を後ろに配置 */
+}
+
+.finalphrase{
+  font-size: 40px;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+
+.Copyright {
+}
+
+a {
 }

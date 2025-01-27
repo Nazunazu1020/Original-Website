@@ -5,27 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link href="css/reset.css"rel="stylesheet" type="text/css" >
+    <link rel="stylesheet" href="./assets/css/reset.css">
 </head>
 
 <body>
 <header>
-    <img src="#" alt="#" class="top-logo">
-    <h1 class="site-name"> 
-    Title   
-    </h1>
+    <img src="./assets/img/logo.png" alt="#" class="top-logo">
+    <h1 class="site-name"> Title</h1>
 
-    <ul id="nav">
-        <li>Feature</li>
-        <li>Search</li>
-        <li>Gallery</li>
-        <li>Map</li>
-    </ul>
+    <section>
+        <header-left>
+            <h1>Title</h1>
+        </header-left>
+        <header-right>
+          <ul class="tags">
+            <li class="tag"><a href="#">Feature</a></li>
+            <li class="tag"><a href="#">Search</a></li>
+            <li class="tag"><a href="#">Gallery</a></li>
+            <li class="tag3"><a href="#">Map</a></li>
+          </ul>
+        </header-right>
+    </section>
     
 </header>
 
 <section class="top">
-    <img src="#" alt="#" class="top-img">
+    <!-- <img src="./assets/img/header.jpg" alt="#" class="top-img"> -->
+    <img src="./assets/img/marble.jpg" alt="" class="topbackground">
     <h1 class="catchphrase">キャッチコピー</h1>
 </section>
 
@@ -39,7 +45,8 @@
 </section>
 
 <section class="Search">
-    <h2 class="search">Cafe search</h2>
+    <h2 class="search">
+        Cafe search</h2>
     <form action="/search" method="get">
         <input type="text" name="query" placeholder="Location..Name..etc">
         <button type="submit">search</button>
