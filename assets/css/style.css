@@ -69,7 +69,8 @@ a {
 }
 
 .site-name {
-  font-size: 40px;
+  font-size: 35px;
+  margin-top: 0%;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   margin-left: 10px;
   color: #a78f45
@@ -127,11 +128,12 @@ a {
 
 
 
-/* section-feature
- */
+/* section-feature *//* section-feature *//* section-feature *//* section-feature */
+
 .feature1{
   height: 500px;
   padding: 80px;
+  overflow: hidden;
   overflow: hidden;
 }
 
@@ -145,6 +147,8 @@ a {
 }
 .seasonal-name{
 text-align: center;
+color: rgb(224, 208, 116);
+display: block;
 }
 
 .seasonal-img{
@@ -157,24 +161,51 @@ text-align: center;
   height: 250px;
   transition:1s all;
   border-radius: 50%;
+  overflow: hidden;
+}
+.seasonal-imgs img{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
 }
 
-.seasonal-imgs:hover{
-  transform:scale(1.1,1.1);
-  transition:1s all;
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* 最初は透明 */
+  .seasonal-imgs {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .seasonal-imgs img {
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .seasonal-imgs.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .seasonal-imgs img:hover{
+    transform: scale(1.1);
+  /* transition:1s all; */
+    
 }
+  
 
 
 
 
-
-/* .imgnames{
-  display: flex;
-  align-items: center;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: rgba(124, 136, 136, 0.886);
-} */
-
+/* search *//* search *//* search *//* search *//* search *//* search */
 
 .Search{
   background-color: rgba(236, 232, 232, 0.769);
@@ -213,21 +244,44 @@ border-color: white;
   justify-content: center;
   padding: 80px;
   margin-top: -80px;
-  overflow: hidden;
 }  
 
-.imgs{
-  display: flex;
+.gallery-container{
+  /* display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 90px;
-  overflow: hidden;
+  gap: 30px;
+  max-width: 600px;  */
 }
+
+.gallery-imgs
+{
+  display: flex;
+  flex-wrap: wrap;
+  /* max-width: 900px; */
+  gap: 70px;
+  justify-content: center;
+  /* width: calc(33.33% - 10px);
+  height: auto;  */
+}
+
 .imgs2{
   width: 250px;
-  height: 250px;
   border-radius: 50%;
-  }
+    /* width: calc(33.33% - 10px); /* 3等分（間隔を考慮） */
+    /* height: auto; アスペクト比を保持 */ */
+}
+
+.imgs2 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.imgs2.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 .cafename{
@@ -236,22 +290,25 @@ border-color: white;
   text-align: center;
 }
 .imgs2:hover{
-  transform:scale(1.1,1.1);
+  transform:scale(1.1);
   transition:1s all;
 }
 
 
 .map1{
   background-color: rgba(236, 232, 232, 0.769);
-  height: 600px;
+  height: 500px;
   padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .map{
   font-size: 40px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   color: rgb(224, 208, 116);
-  margin-bottom: 50px;
+  margin-bottom: 150px;
 }
 
 .mapname{
@@ -263,6 +320,8 @@ padding: 50px;
 .googlemap{
   display: flex;
   justify-content: center;
+  position: relative;
+  bottom: 100px;
 }
 
 iframe{
@@ -278,7 +337,7 @@ width: 50vw;
 
 footer {
   padding: auto;
-  height: 65vh;
+  height: 90vh;
   width: 100vw;
   position: absolute;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -332,11 +391,4 @@ bottom: 5px;
   font-size: 40px;
   margin-top: 50px;
   font-weight: bold;
-}
-
-
-.Copyright {
-}
-
-a {
 }
